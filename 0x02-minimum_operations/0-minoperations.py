@@ -8,7 +8,7 @@ def minOperations(n):
     '''
     method to count mininum Operations to make n => 0
     '''
-    if n <=1:
+    if n <= 1:
         return 0
     count = 0
     factor = 2
