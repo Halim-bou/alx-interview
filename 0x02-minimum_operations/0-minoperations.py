@@ -8,15 +8,13 @@ def minOperations(n):
     '''
     method to count mininum Operations to make n => 0
     '''
-    i = 1
-    count = 0
-    if n <= 0:
+    if n <=1:
         return 0
-    while n > i:
-        if i % 2 == 0:
-            count += 1
-            i = i * 2
-        elif i % 2 != 0:
-            count += 2
-            i = i +  1
-    return count + 1
+    count = 0
+    factor = 2
+    while n > 1:
+        while n % factor == 0:
+            count += factor
+            n //= factor
+        factor += 1
+    return count
